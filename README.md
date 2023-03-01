@@ -7,7 +7,7 @@ Comme ça ça agrémente le folio, et c'est pas perdu dans l'espace.
 ## Liste des langages & projets
 
 - Javascript
-  - [Chat box](XXX) - 28/02/23
+  - Chat box - [Démo](http://stockage.masamune.fr/masamune/tests-techniques/javascript/chat-box/) - [Code](./javascript/chat-box) - 28/02/23
 
 ## Documentation
 
