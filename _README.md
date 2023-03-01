@@ -1,43 +1,15 @@
-# Project name
+# Base / Repository github / New project
 
-Small description of the project.
+Some basic & configuration files, ready to copy/paste to a new repository.
 
-## Usual comands
-
-```bash
-stuff
-```
-
-## Installation
-
-```bash
-stuff
-```
-
-### 🔒️ Sensible informations
-
-Sensible files won't be versionned in this public project.
-
-You can use the `_secret` suffix in your 'secret' file name.
-
-Instead, they will be stored on a *private* repository, containing the same tree folder.
-
-Just copy/paste the 'secrets' repository on top of this one **on your local machine only**.
-
-And don't forget to update it if some creditentials changes.
-
-## Documentation
-
-This project's documentation can be found in the [_docs](./_docs/) folder.
-
-## Technologies
-
-- html
-
-## Ressources
-
-- [html](https://developer.mozilla.org/fr/docs/Web/HTML)
-
-## Credits
-
-Masamune / Maxime Chevasson
+| Filename | Purpose | Links |
+|---|---|---|
+| `.editorconfig` | 🔧👌 Define some editor coding style (linter) such as indentation, encoding, end of lines, etc. | [editorconfig.org](https://editorconfig.org/) |
+| `.gitignore` | 🙈 Ignore specific files, either 🖥️ Operating System specific, downloaded from 📦️ package managers, 🤖 generated, 📄 logs, 🔒️ secrets and **other stuff** | [Git documentation](https://git-scm.com/docs/gitignore) |
+| `humans.txt` | 🧑 Who participated to the project | [humans txt org](https://humanstxt.org/) |
+| `LICENSE` | 📄 Licensing stuff, no responsability if modified or commercial use | [Wiki MIT licence](https://fr.wikipedia.org/wiki/Licence_MIT) |
+| `_README.md` | 📝 Project notes, to be renamed to `README.md` |  |
+| `TODO.md` | 🌱 Project tasks to be done |  |
+| `SHAME.md` | 🍻 Project tasks to be re-done | [shame.css](https://csswizardry.com/2013/04/shame-css/) |
+| `_docs/README.md` | 📝 Where to store the project documentation, with some folders structure |  |
+| `_docs/local-environnement-setup.md` | 📝 Local project setup notes |  |
