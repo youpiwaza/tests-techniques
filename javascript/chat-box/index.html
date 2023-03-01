@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>💬 Chatbox - Test technique</title>
+
+        <!-- Chargement de la police afin de ne plus être dans les années 90 -->
+        <!--    Google web fonts > Bebas Neue > https://fonts.google.com/specimen/Bebas+Neue?query=bebas -->
+        <link href="https://fonts.googleapis.com"   rel="preconnect">
+        <link href="https://fonts.gstatic.com"      rel="preconnect" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="./assets/_vendors/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+
+        <!-- Font awesome -->
+        <link href="./assets/_vendors/fontawesome-free-6.3.0-web/css/fontawesome.css"   rel="stylesheet">
+        <link href="./assets/_vendors/fontawesome-free-6.3.0-web/css/brands.css"        rel="stylesheet">
+        <link href="./assets/_vendors/fontawesome-free-6.3.0-web/css/solid.css"         rel="stylesheet">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/normalize.css">
+        <link rel="stylesheet" href="./assets/css/main.css">
+    </head>
+
+<body>
+    <div class="container mb-2">
+
+        <h1 class="mb-2">💬 Chatbox - Test technique</h1>
+        <h2 class="mb-4">Maxime Chevasson / <a class="contact" href="mailto:masamune.code@gmail.com" title="Me contacter ;)">Masamune</a></h2>
+
+        <div class="chats container text-center">
+
+            <div class="row justify-content-around">
+
+                <div class="col-12 col-md-6 col-xl-4">
+
+                    <div id="chat-first" class="one-chat card mb-5">
+
+
+
+                        <div class="chat-header card-header">
+
+                            <div class="row align-items-center">
+                                <div class="icone col-2">
+                                    <button type="button" class="btn btn-outline-primary rounded-pill d-flex align-items-center justify-content-center">
+                                        <i class="fa-solid fa-arrow-left"></i>
+                                    </button>
+                                </div>
+                                <div class="avatar col-2">
+                                    <img class="rounded-circle me-2" src="./assets/images/avatar-1.jpg" width="50" height="50">
+                                </div>
+                                <div class="name col-8 text-start">
+                                    <span>Rainbow Dash</span>
+                                </div>
+                            </div>
+
+                        <!-- /.chat-header -->
+                        </div>
+
+
+
+                        <!-- Le contenu HTML est inversé afin de forcer le scroll vers le bas via CSS -->
+                        <!--    @see    https://stackoverflow.com/a/44051405 -->
+                        <div class="chat-body card-body">
+
+                            <div class="suggested-responses suggested-responses-hidden card">
+                                <div class="card-header">
+                                    <span class="card-text">Réponses suggérées</span>
+
+
+                                    <button class="btn-display btn position-absolute top-0 end-0">
+                                        <i class="fa-solid fa-caret-up"></i>
+                                    </button>
+                                </div>
+                                <div class="suggested-responses-content card-body">
+                                    <button class="btn btn-primary me-2">C'est pas faux</button>
+                                    <button class="btn btn-primary">Nan ce mot jle connait pas</button>
+                                </div>
+                            </div>
+
+                            <p class="temps-depuis-dernier-message card-text hidden">
+                                <small class="text-muted">Dernier message reçu il y a <span>1</span> secondes</small>
+                            </p>
+
+
+
+                            <div class="chat-conversation">
+                                <!-- La ou seront affichés les messages -->
+                                
+                                <!-- 📌 Tests d'affichages HTML/CSS (templating) -->
+                                <!--                                 
+                                <div class="chat-bubble disabled">
+                                    <span class="chat-bubble-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, autem!</span>
+                                </div>
+
+                                <div class="chat-bubble chat-bubble-right position-relative">
+
+                                    <div class="chat-bubble-actions position-absolute top-0 end-0 me-1 mt-1">
+                                        <button class="btn-edit btn btn-light">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
+                                        <button class="btn-delete btn btn-light">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+
+                                    <span class="chat-bubble-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero fugiat accusamus nemo vitae perferendis totam laborum ipsum animi similique. Omnis minima, ullam alias tempora deleniti assumenda voluptatum saepe inventore dolore.</span>
+                                </div>
+
+                                <div class="chat-bubble chat-bubble-right position-relative">
+
+                                    <div class="chat-bubble-actions position-absolute top-0 end-0 me-1 mt-1">
+                                        <button class="btn-edit btn btn-light">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
+                                        <button class="btn-delete btn btn-light">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+
+                                    <span class="chat-bubble-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero fugiat accusamus nemo vitae perferendis totam laborum ipsum animi similique. Omnis minima, ullam alias tempora deleniti assumenda voluptatum saepe inventore dolore.</span>
+                                </div>
+
+                                <div class="chat-bubble chat-bubble-right position-relative">
+
+                                    <div class="chat-bubble-actions position-absolute top-0 end-0 me-1 mt-1">
+                                        <button class="btn-edit btn btn-light">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
+                                        <button class="btn-delete btn btn-light">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+
+                                    <span class="chat-bubble-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero fugiat accusamus nemo vitae perferendis totam laborum ipsum animi similique. Omnis minima, ullam alias tempora deleniti assumenda voluptatum saepe inventore dolore.</span>
+                                </div>
+                                -->
+
+                            <!-- /.chat-conversation -->
+                            </div>
+
+
+
+                            <div class="chat-conversation-start mb-4">
+                                <h5 class="card-title mb-1">Début de votre conversation</h5>
+                                <p class="card-text">
+                                    <small class="text-muted">Vous pouvez envoyer un message</small>
+                                </p>
+                            </div>
+
+                        <!-- /.chat-body -->
+                        </div>
+
+
+
+                        <form class="chat-footer card-footer">
+
+                            <div class="input-group mb-3">
+
+                                <input class="form-input-message form-control" type="text" placeholder="Votre message" aria-label="Votre message">
+
+                                <button class="form-send-button btn btn-outline-secondary" type="submit">
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                </button>
+
+                            </div>
+
+                        <!-- ./chat-footer -->
+                        </form>
+
+
+
+                    <!-- /#chat-first .card -->
+                    </div>
+
+                <!-- /.col-12 col-md-6 col-xl-4 -->
+                </div>
+
+
+
+                <div class="col-12 col-md-6 col-xl-4">
+
+                    <div id="chat-second" class="one-chat card mb-5">
+
+                        <div class="chat-header card-header">
+
+                            <div class="row align-items-center">
+                                <div class="icone col-2">
+                                    <button type="button" class="btn btn-outline-primary rounded-pill d-flex align-items-center justify-content-center">
+                                        <i class="fa-solid fa-arrow-left"></i>
+                                    </button>
+                                </div>
+                                <div class="avatar col-2">
+                                    <img class="rounded-circle me-2" src="./assets/images/avatar-2.jpg" width="50" height="50">
+                                </div>
+                                <div class="name col-8 text-start">
+                                    <span>Fluttershy</span>
+                                </div>
+                            </div>
+
+                        <!-- /.chat-header -->
+                        </div>
+
+
+                        <div class="chat-body card-body">
+
+                            <div class="suggested-responses suggested-responses-hidden card">
+
+                                <div class="card-header">
+                                    <span class="card-text">Réponses suggérées</span>
+
+
+                                    <button class="btn-display btn position-absolute top-0 end-0">
+                                        <i class="fa-solid fa-caret-up"></i>
+                                    </button>
+                                </div>
+
+                                <div class="suggested-responses-content card-body">
+                                    <button class="btn btn-primary me-2">Un petit oiseau 🎶</button>
+                                    <button class="btn btn-primary">🥄 Cuillère</button>
+                                </div>
+
+                            <!-- /.suggested-responses -->
+                            </div>
+
+                            <p class="temps-depuis-dernier-message card-text hidden">
+                                <small class="text-muted">Dernier message reçu il y a <span>10</span> secondes</small>
+                            </p>
+
+                            <div class="chat-conversation">
+                                <!-- La ou seront affichés les messages -->
+                            <!-- /.chat-conversation -->
+                            </div>
+
+                            <div class="chat-conversation-start mb-4">
+                                <h5 class="card-title mb-1">Début de votre conversation</h5>
+                                <p class="card-text">
+                                    <small class="text-muted">Vous pouvez envoyer un message</small>
+                                </p>
+                            </div>
+
+                        <!-- /.chat-body -->
+                        </div>
+
+
+
+                        <form class="chat-footer card-footer">
+
+                            <div class="input-group mb-3">
+
+                                <input class="form-input-message form-control" type="text" placeholder="Votre message" aria-label="Votre message">
+
+                                <button class="form-send-button btn btn-outline-secondary" type="submit">
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                </button>
+
+                            </div>
+
+                        <!-- ./chat-footer -->
+                        </form>
+
+
+
+                    <!-- /#chat-second .card -->
+                    </div>
+
+                <!-- /.col-12 col-md-6 col-xl-4 -->
+                </div>
+
+            <!-- /.row -->
+            </div>
+
+        <!-- ./chats -->
+        </div>
+
+    <!-- /.container -->
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="./assets/_vendors/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -4,6 +4,11 @@ Collection de tests techniques réalisés au cours de mes différents entretiens
 
 Comme ça ça agrémente le folio, et c'est pas perdu dans l'espace.
 
+## Liste des langages & projets
+
+- Javascript
+  - [Chat box](XXX) - 28/02/23
+
 ## Documentation
 
 This project's documentation can be found in the [_docs](./_docs/) folder.
